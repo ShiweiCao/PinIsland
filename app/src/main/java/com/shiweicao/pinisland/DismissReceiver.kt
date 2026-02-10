@@ -8,6 +8,12 @@ import android.app.NotificationManager
 class DismissReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        manager.cancel(1001) // 取消 ID 为 1001 的通知
+
+        // 获取传递过来的 ID，默认为 -1
+        val notificationId = intent.getIntExtra("notification_id", -1)
+
+        if (notificationId != -1) {
+            manager.cancel(notificationId)
+        }
     }
 }
