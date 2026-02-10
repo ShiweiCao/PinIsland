@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/etRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="餐厅名称 (例如: 麦当劳)"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/etOrderNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="取餐单号 (例如: A25)"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/btnPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="生成取餐提醒" />
+
+</LinearLayout>
